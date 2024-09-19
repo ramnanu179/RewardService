@@ -1,5 +1,5 @@
 # Problem statement
-This service provide a reward program to the customers, awarding points to the customers based on each transaction for a given time.
+A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
 
 A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent between $50 and $100 in each transaction.
 (e.g. a $120 purchase = 2*$20 + 1*$50 = 90 Points).
