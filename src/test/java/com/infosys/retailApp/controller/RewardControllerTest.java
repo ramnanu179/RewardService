@@ -36,6 +36,7 @@ public class RewardControllerTest {
 
 		when(rewardService.getRewards(eq(custId), anyInt()))
 				.thenThrow(new CustomerNotFoundException("customer not found"));
+		
 		mockMvc.perform(MockMvcRequestBuilders.get("/api/1.1/reward/customer/{custId}", custId).param("months", "3"))
 				.andExpect(status().isBadRequest());
 	}

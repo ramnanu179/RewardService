@@ -44,7 +44,7 @@ public class RewardServiceTest {
 	}
 
 	@Test
-	void testGetCustomerRewards_InvalidCustomerId() {
+	void testGetCustomerRewardsInvalidCustomerId() {
 		BigInteger custId = new BigInteger("2");
 		when(customerRepository.findById(custId)).thenReturn(Optional.ofNullable(null));
 

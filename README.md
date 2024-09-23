@@ -10,22 +10,24 @@ A customer receives 2 points for every dollar spent over $100 in each transactio
 + Maven
 + MariaDB 11.5.2-MariaDB
 
+### Test Proofs and Screens:
+Please check the images folder.
 
 ## Entity Diagram:
 ![Flow Diagram 1](images/entity-diagram.png)
 
-#### Data flow diagram:
+## Data flow diagram:
 ![Flow Diagram 2](images/data-flow-diagram.png)
 
 ## API Documentation:
+Get Rewards:
 
- Get Rewards:
- 
-    + URI: "api/1.1/reward/customer/[custId]?months=[months]"
-    + Month default value 3, if not specified(optional).
-    + Calculate and return rewards for a customer in below format.
-    + Response Body:
-   ```json
+   + URI: "api/1.1/reward/customer/[custId]?months=[months]"
+   + Month default value 3, if not specified(optional).
+   + Calculate and return rewards for a customer in below format.
+   + Response Body:
+  
+    ```json
        {
 		    "name": "Rakesh",
 		    "year": 2024,
@@ -44,5 +46,17 @@ A customer receives 2 points for every dollar spent over $100 in each transactio
 		        }
 		     ]
 		   }
-		   
-    
+	```	   
+Create transaction :
+
+   + URI: "/api/1.1/transaction/create"
+   + Method: POST
+   + Request Body:
+  
+   ```json
+   {
+    "customerId": "1",
+    "amount": 300
+   }
+ 
+ 
